@@ -1,0 +1,182 @@
+---
+title: "A importância da Infraestrutura Escolar e dos Investimentos Públicos no Desempenho Educacional Brasileiro"
+author: ["Aluna: Luísa Gisele Böck", "Orientador: Dieison Lenon Casagrande"]
+date: "9 de novembro de 2022"
+format: 
+  revealjs: 
+    incremental: true
+    transition: slide
+    footer: "Slides por [Luísa Gisele Böck](https://luisa.rbind.io/), feito com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Código disponível no [GitHub](https://github.com/lgiselebock/ufsm-37a-jai)."
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    bibliography: references.bib
+    csl: abnt-ufrgs.csl
+title-slide-attributes: 
+  data-background-image: img/logo-jai.png
+  data-background-size: 80%
+  data-background-position: 50% 5%
+---
+
+## Introdução {.center}
+
+-   A educação é um processo fundamental para o desenvolvimento social e econômico de uma nação.
+
+-   A Constituição Federal e a Lei de Diretrizes e Bases da Educação Nacional [@brasil_constituicao_1988; @brasil_lei_1996] indicam a necessidade de políticas públicas que assegurem o ingresso e a permanência dos estudantes nas escolas, assim como o aproveitamento de ambientes escolares em condições mínimas de funcionamento [@vasconcelos_infraestrutura_2020-1].
+
+-   Uma das principais contribuições que o investimento em educação gera é a redução das desigualdades sociais ao oportunizar melhoria na qualidade de vida das pessoas [MELCHIOR, 1997 apud @abrita_alise_2013].
+
+-   Apesar dos expressivos avanços ocorridos na Educação Brasileira nas últimas décadas [@lima_da_2011], ainda é possível observar uma subutilização dos recursos públicos, com grandes desigualdades educacionais entre as escolas brasileiras [@alves_study_2018] e com resultados revelando a baixa qualidade nos indicadores educacionais [@paula_fatores_2018].
+
+## Objetivos {.center}
+
+-   Identificar a relação existente entre os Investimentos Públicos em Educação e a Infraestrutura Escolar, nos anos de 2009 e 2019;
+
+-   Identificar a relação existente entre os Investimentos Públicos em Educação e a Infraestrutura Escolar com o Desempenho Educacional (Ideb) dos alunos matriculados nas escolas públicas brasileiras, nos anos de 2009 e 2019.
+
+## Metodologia
+
+### Infraestrutura Escolar 
+
+|                Dimensão                 |                                                                                                                                                     Indicador                                                                                                                                                      |
+|:----------------------------------:|:----------------------------------:|
+| Infraestrutura de serviços básicos (ib) |                      1\. Local de funcionamento do prédio escolar<br>2. Existência de água rede pública<br>3. Existência de energia rede pública<br>4. Existência de esgoto rede pública<br>5. Existência de alimentação<br>6. Existência de coleta de lixo periódica<br>7. Acesso à internet                      |
+|       Infraestrutura física (if)        | 1\. Existência de sala de professor<br>2. Existência de laboratório de informática<br>3. Existência de laboratório de ciências<br>4. Existência de quadra de esportes<br>5. Existência de cozinha<br>6. Existência de biblioteca<br>7. Existência de parque infantil<br>8. Existência de banheiro dentro do prédio |
+|  Disponibilidade de equipamentos (de)   |                                                                           1\. Existência de equipamento de TV<br>2. Existência de equipamento de copiadora<br>3. Existência de equipamento de impressora<br>4. Existência de computador                                                                            |
+
+<center><font size="3">Fonte: Elaboração própria (2022) com base nos Censos Escolares (2009 e 2019) do Inep.</font></center>
+
+## Metodologia {.center}
+
+### Infraestrutura Escolar
+
+Baseado em [@lima_gestao_2015] e [@vasconcelos_infraestrutura_2020-1], o cálculo do IIE é realizado em três etapas:
+
+::: columns
+::: {.column width="45%"}
+
+- é considerado a natureza binária de cada indicador (1 = existência do componente da escola, 0 = ausência) ;
+  
+- são elaborados subíndices para cada dimensão mediante a expressão ao lado;
+  
+- o IIE corresponde à média aritmética dos subíndices calculados;
+
+- os valores variam entre 0 (ausência de todos os indicadores) e 1 (presença de todos os indicadores):
+
+  - quando multiplicados por 100, podem ser interpretados na forma percentual.
+:::
+
+::: {.column width="55%"}
+$$
+SIIE_{jp} = \dfrac{\sum^n_{i=1} E_{pij}}{\sum^n_{i=1} E_{maxij}}
+$$
+
+  - $SIIE_{jp}$ = subíndice da Infraestrutura Escolar referente à *j-ésima* dimensão e à *p-ésima* escola;\
+   
+  - $E_{pij}$ = escore obtido pela *p-ésima* escola do *i-ésimo* indicador da *j-ésima* dimensão (0 ou 1);\
+
+  - $E_{maxij}$ = escore máximo do *i-ésimo* indicador da *j-ésima* dimensão (no caso, 1);\ 
+
+  - $j$ = número de dimensões (1, 2, 3, ..., m);\
+
+  - $p$ = número de escolar (1, 2, 3, ..., k);\
+
+  - $i$ = número de indicadores da *j-ésima* dimensão (1, 2, 3, ..., n).
+:::
+:::
+
+## Metodologia {.center}
+
+### Investimentos Públicos
+
+-   Representa as despesas com educação;
+
+-   Incluem os recursos dos governos municipal, estadual e federal;
+
+-   É representado por duas séries de despesas:
+
+    -   soma das despesas no período de 2004 a 2008, representando o ano de 2009;
+
+    -   soma das despesas no período de 2014 a 2018, representando o ano de 2019.
+
+-   Os valores foram deflacionados através do Índice Geral de Preços (IGP-DI) da Fundação Getúlio Vargas (FGV), com base no mês de dezembro de 2019.
+
+## Metodologia {.center}
+
+### Desempenho Educacional
+
+-   Ideb dos municípios, limitado ao universo das escolas públicas;
+
+-   A fim de evitar possível viés nos valores pontuais do Ideb, foram adotados:
+
+    -   valores médios das notas do Ideb nos anos de 2005, 2007 e 2009 para o ano de 2009;
+
+    -   valores médios das notas do Ideb nos anos de 2015, 2017 e 2019 para o ano de 2019.
+
+## Metodologia {.center}
+
+### Fonte dos Dados
+
+|           **Indicador**            |                      **Proxy**                      |                                                                                                                                           **Fonte dos dados**                                                                                                                                           |                              **Período** |
+|:---------:|:---------:|:--------------------------------------:|----------:|
+|       Infraestrutura Escolar       |       Índice de Infraestrutura Escolar (IIE)        |                             **Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)** Censo Escolar da Educação Básica (formulário Cadastro das Escolas) <https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar>                             |                         Anos 2009 e 2019 |
+| Investimentos Públicos em Educação |                Despesas com Educação                | Tesouro Nacional - **Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro (Siconfi)** Despesas por função: educação <https://www.tesourotransparente.gov.br/publicacoes/finbra-dados-contabeis-dos-municipios-1989-a-2012/2012/26> <https://siconfi.tesouro.gov.br/siconfi/index.jsf> |           Anos 2004 a 2008 e 2014 a 2018 |
+|       Desempenho Educacional       | Índice de Desenvolvimento da Educação Básica (Ideb) |                              **Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)** Ideb: Resultados e Metas <http://inep.gov.br/web/guest/educacao-basica/ideb/resultados> <https://basedosdados.org/dataset/br-inep-ideb?bdm_table=municipio>                              | Anos 2005, 2007, 2009, 2015, 2017 e 2019 |
+
+<center><font size="3">Fonte: Elaboração própria (2022)</font></center>
+
+## Metodologia {.center}
+
+### Modelo Econométrico
+
+- Foram estimados, através do método de Mínimos Quadrados Ordinários (MQO), dois modelos para os anos de 2009 e 2019:
+
+  1) para analisar o impacto dos Investimentos Públicos em Educação na Infraestrutura Escolar:
+  $$
+  lnIIE_j = \beta_0 + \beta_1lnInvPublico_j + \epsilon_j
+  $$
+  
+  2) para analisar o impacto dos Investimentos Públicos em Educação e da Infraestrutura Escolar no Desempenho Educacional:
+  $$
+  lnIDEB_j = \beta_0 + \beta_1lnIIE_j + \beta_2lnInvPublico_j + \epsilon_j
+  $$
+
+- $lnIIE_j$ -- logaritmo do Índice de Infraestrutura da Escola para o _j-ésimo_ município;
+  
+- $lnInvPublico_j$ -- logaritmo dos Investimentos Públicos em Educação para o _j-ésimo_ município;
+  
+- $lnIDEB_j$ -- logaritmo do Índice de Desenvolvimento da Educação Básica para o _j-ésimo_ município.
+  
+## Resultados
+
+RESULTADOS ENCONTRADOS
+
+## Conclusão {.center}
+
+- A Infraestrutura das escolas públicas e os resultados do Ideb apresentaram melhoras entre os anos analisados -- 2009 e 2019;
+
+- Ainda é possível observar um elevado nível de desigualdade entre as escolas públicas brasileiras;
+
+- As análises apresentam:
+
+  - uma importância significativa dos Investimentos Públicos em Educação para a Infraestrutura Escolar; 
+  
+  - uma relação significativa dos Investimentos Públicos e da Infraestrutura Escolar para o Desempenho Educacional;
+  
+  - a Infraestrutura Escolar possui uma importância superior no Desempenho Educacional quando comparado com os Investimentos Públicos em Educação.
+  
+## Conclusão {.center}
+
+Apesar de o Estado brasileiro ter demonstrado interesse na democratização do ensino público de qualidade, aumentando as despesas nos últimos anos e implementando ações de incentivo, a situação das escolas brasileira ainda é bastante deficiente.
+
+O rendimento do aluno não depende exclusivamente dele, cabe ao poder público disponibilizar os meios para as escolas possuírem uma estrutura básica para exercer suas atividades e que os alunos tenham ao seu alcance um ambiente favorável para o aprendizado.
+
+## Referências
+
+```{r}
+# #| fig-align: "center"
+# #| out-width: "100%"
+# #| out-height: "50%"
+# 
+# knitr::include_graphics("logo-jai.png")
+```

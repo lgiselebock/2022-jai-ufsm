@@ -1,0 +1,80 @@
+/*-- scss:defaults --*/
+  // importing fonts
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=Yanone+Kaffeesatz&display=swap');
+
+// fonts
+$font-family-sans-serif: 'Lato', Tahoma, sans-serif !default;
+
+// headings
+$presentation-heading-font: 'Yanone Kaffeesatz',  Tahoma, sans-serif  !default;
+$presentation-heading-color: #562457 !default;
+$h1-font-size: 1.6em !default;
+$h2-font-size: 1.3em !default;
+$h3-font-size: 1.15em !default;
+
+
+//code
+$code-color: #88398A !default;
+  $font-family-monospace: 'Inconsolata', monospace  !default;
+
+// general
+$body-bg: #fff;
+  $body-color: #000000;
+  $link-color: #88398a;
+  $presentation-font-size-root: 25px;
+
+/*-- scss:rules --*/
+  .reveal pre code {
+    background-color: #f8f8f8;
+      font-size: 1em;
+    //padding: 0.5em;
+    line-height: 1.2em;
+  }
+
+
+
+.title {
+  font-size: $h1-font-size;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.author {
+  color: $presentation-heading-color;
+  font-size: 0.7em;
+  text-align: right;
+}
+
+.date {
+  font-size: 0.7em;
+  color: $presentation-heading-color;
+  padding-top: 50px;
+}
+
+.reveal .panel-tabset [role=tab] {
+  font-size: 0.8em;
+}
+
+.reveal .slides section .fragment.visible {
+  text-align: justify;
+}
+
+table, .table {
+    caption-side: top;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+}
+
+.reveal ol, .reveal dl, .reveal ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 1em 0 1em;
+}
+
+.reveal .slides section, .reveal .slides section>section {
+    line-height: 1.3;
+    font-weight: inherit;
+    text-align: justify;
+}
+
+
