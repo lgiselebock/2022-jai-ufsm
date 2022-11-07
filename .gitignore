@@ -3,3 +3,6 @@
 .Rdata
 .httr-oauth
 .DS_Store
+
+data-raw/00-set-billing-id.R
+data-raw/data-censo-escolar
