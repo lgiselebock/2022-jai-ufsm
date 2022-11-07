@@ -11,7 +11,7 @@ format:
     slide-number: c/t
     show-slide-number: all
     bibliography: references.bib
-    csl: abnt-ufrgs.csl
+    csl: csl/abnt.csl
 title-slide-attributes: 
   data-background-image: img/logo-jai.png
   data-background-size: 80%
@@ -50,7 +50,7 @@ title-slide-attributes:
 
 ### Infraestrutura Escolar
 
-Baseado em [@lima_gestao_2015] e [@vasconcelos_infraestrutura_2020-1], o cálculo do IIE é realizado em três etapas:
+Baseado em Lima [-@lima_gestao_2015] e Vasconcelos et al. [-@vasconcelos_infraestrutura_2020-1], o cálculo do IIE é realizado em três etapas:
 
 ::: columns
 ::: {.column width="45%"}
