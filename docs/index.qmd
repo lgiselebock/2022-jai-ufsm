@@ -30,13 +30,32 @@ title-slide-attributes:
 
 ## Objetivos {.center}
 
--   Identificar a relação existente entre os Investimentos Públicos em Educação e a Infraestrutura Escolar, nos anos de 2009 e 2019;
+- Comparar os Índices de Infraestrutura Escolar (IIE), a partir de estatísticas descritivas, das Unidades Federativas dos Brasil, nos anos de 2009 e 2019;
 
--   Identificar a relação existente entre os Investimentos Públicos em Educação e a Infraestrutura Escolar com o Desempenho Educacional (Ideb) dos alunos matriculados nas escolas públicas brasileiras, nos anos de 2009 e 2019.
+- Identificar a relação existente entre:
 
-## Metodologia
+  -   Investimentos Públicos em Educação e Infraestrutura Escolar, nos anos de 2009 e 2019;
+  
+  -   Investimentos Públicos em Educação e Infraestrutura Escolar com Desempenho Educacional (Ideb) dos alunos matriculados nas escolas públicas brasileiras, nos anos de 2009 e 2019.
 
-### Infraestrutura Escolar 
+
+## Metodologia {.center}
+
+### Fonte dos Dados
+
+|           **Indicador**            |                      **Proxy**                      |                                                                                                                                           **Fonte dos dados**                                                                                                                                           |                              **Período** |
+|:-------------:|:-------------:|:---------------------------:|--------------:|
+|       Infraestrutura Escolar       |       Índice de Infraestrutura Escolar (IIE)        |                             **Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)** Censo Escolar da Educação Básica (formulário Cadastro das Escolas) <https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar>                             |                         Anos 2009 e 2019 |
+| Investimentos Públicos em Educação |                Despesas com Educação                | Tesouro Nacional - **Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro (Siconfi)** Despesas por função: educação <https://www.tesourotransparente.gov.br/publicacoes/finbra-dados-contabeis-dos-municipios-1989-a-2012/2012/26> <https://siconfi.tesouro.gov.br/siconfi/index.jsf> |           Anos 2004 a 2008 e 2014 a 2018 |
+|       Desempenho Educacional       | Índice de Desenvolvimento da Educação Básica (Ideb) |                              **Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)** Ideb: Resultados e Metas <http://inep.gov.br/web/guest/educacao-basica/ideb/resultados> <https://basedosdados.org/dataset/br-inep-ideb?bdm_table=municipio>                              | Anos 2005, 2007, 2009, 2015, 2017 e 2019 |
+
+<center><font size="3">Fonte: Elaboração própria (2022)</font></center>
+
+## Metodologia {.smaller}
+
+### Infraestrutura Escolar
+
+Consiste em "instalações, equipamentos e serviços necessários para garantir o funcionamento da escola e auxiliar a aprendizagem do aluno" [@garcia_um_2014, p. 155].
 
 |                Dimensão                 |                                                                                                                                                     Indicador                                                                                                                                                      |
 |:----------------------------------:|:----------------------------------:|
@@ -54,16 +73,15 @@ Baseado em Lima [-@lima_gestao_2015] e Vasconcelos et al. [-@vasconcelos_infraes
 
 ::: columns
 ::: {.column width="45%"}
+-   é considerado a natureza binária de cada indicador (1 = existência do componente da escola, 0 = ausência) ;
 
-- é considerado a natureza binária de cada indicador (1 = existência do componente da escola, 0 = ausência) ;
-  
-- são elaborados subíndices para cada dimensão mediante a expressão ao lado;
-  
-- o IIE corresponde à média aritmética dos subíndices calculados;
+-   são elaborados subíndices para cada dimensão mediante a expressão ao lado;
 
-- os valores variam entre 0 (ausência de todos os indicadores) e 1 (presença de todos os indicadores):
+-   o IIE corresponde à média aritmética dos subíndices calculados;
 
-  - quando multiplicados por 100, podem ser interpretados na forma percentual.
+-   os valores variam entre 0 (ausência de todos os indicadores) e 1 (presença de todos os indicadores):
+
+    -   quando multiplicados por 100, podem ser interpretados na forma percentual.
 :::
 
 ::: {.column width="55%"}
@@ -71,17 +89,17 @@ $$
 SIIE_{jp} = \dfrac{\sum^n_{i=1} E_{pij}}{\sum^n_{i=1} E_{maxij}}
 $$
 
-  - $SIIE_{jp}$ = subíndice da Infraestrutura Escolar referente à *j-ésima* dimensão e à *p-ésima* escola;\
-   
-  - $E_{pij}$ = escore obtido pela *p-ésima* escola do *i-ésimo* indicador da *j-ésima* dimensão (0 ou 1);\
+-   $SIIE_{jp}$ = subíndice da Infraestrutura Escolar referente à *j-ésima* dimensão e à *p-ésima* escola;\
 
-  - $E_{maxij}$ = escore máximo do *i-ésimo* indicador da *j-ésima* dimensão (no caso, 1);\ 
+-   $E_{pij}$ = escore obtido pela *p-ésima* escola do *i-ésimo* indicador da *j-ésima* dimensão (0 ou 1);\
 
-  - $j$ = número de dimensões (1, 2, 3, ..., m);\
+-   $E_{maxij}$ = escore máximo do *i-ésimo* indicador da *j-ésima* dimensão (no caso, 1); 
 
-  - $p$ = número de escolar (1, 2, 3, ..., k);\
+-   $j$ = número de dimensões (1, 2, 3, ..., m);\
 
-  - $i$ = número de indicadores da *j-ésima* dimensão (1, 2, 3, ..., n).
+-   $p$ = número de escolar (1, 2, 3, ..., k);\
+
+-   $i$ = número de indicadores da *j-ésima* dimensão (1, 2, 3, ..., n).
 :::
 :::
 
@@ -105,6 +123,9 @@ $$
 
 ### Desempenho Educacional
 
+O Índice de Desenvolvimento da Educação Básica (Ideb) é um indicador de qualidade educacional, padronizado entre zero e dez, que reúne os resultados do fluxo escolar (aprovação), obtidos a partir dos dados do Censo Escolar, e das médias de desempenho nas avaliações padronizadas do Saeb.
+
+
 -   Ideb dos municípios, limitado ao universo das escolas públicas;
 
 -   A fim de evitar possível viés nos valores pontuais do Ideb, foram adotados:
@@ -115,63 +136,706 @@ $$
 
 ## Metodologia {.center}
 
-### Fonte dos Dados
-
-|           **Indicador**            |                      **Proxy**                      |                                                                                                                                           **Fonte dos dados**                                                                                                                                           |                              **Período** |
-|:---------:|:---------:|:--------------------------------------:|----------:|
-|       Infraestrutura Escolar       |       Índice de Infraestrutura Escolar (IIE)        |                             **Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)** Censo Escolar da Educação Básica (formulário Cadastro das Escolas) <https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar>                             |                         Anos 2009 e 2019 |
-| Investimentos Públicos em Educação |                Despesas com Educação                | Tesouro Nacional - **Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro (Siconfi)** Despesas por função: educação <https://www.tesourotransparente.gov.br/publicacoes/finbra-dados-contabeis-dos-municipios-1989-a-2012/2012/26> <https://siconfi.tesouro.gov.br/siconfi/index.jsf> |           Anos 2004 a 2008 e 2014 a 2018 |
-|       Desempenho Educacional       | Índice de Desenvolvimento da Educação Básica (Ideb) |                              **Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)** Ideb: Resultados e Metas <http://inep.gov.br/web/guest/educacao-basica/ideb/resultados> <https://basedosdados.org/dataset/br-inep-ideb?bdm_table=municipio>                              | Anos 2005, 2007, 2009, 2015, 2017 e 2019 |
-
-<center><font size="3">Fonte: Elaboração própria (2022)</font></center>
-
-## Metodologia {.center}
-
 ### Modelo Econométrico
 
-- Foram estimados, através do método de Mínimos Quadrados Ordinários (MQO), dois modelos para os anos de 2009 e 2019:
+Foram estimados, através do método de Mínimos Quadrados Ordinários (MQO), dois modelos para os anos de 2009 e 2019:
 
-  1) para analisar o impacto dos Investimentos Públicos em Educação na Infraestrutura Escolar:
-  $$
-  lnIIE_j = \beta_0 + \beta_1lnInvPublico_j + \epsilon_j
-  $$
-  
-  2) para analisar o impacto dos Investimentos Públicos em Educação e da Infraestrutura Escolar no Desempenho Educacional:
-  $$
-  lnIDEB_j = \beta_0 + \beta_1lnIIE_j + \beta_2lnInvPublico_j + \epsilon_j
-  $$
+- para analisar o impacto dos Investimentos Públicos em Educação na Infraestrutura Escolar: 
+        $$
+        lnIIE_j = \beta_0 + \beta_1lnInvPublico_j + \epsilon_j
+        $$
 
-- $lnIIE_j$ -- logaritmo do Índice de Infraestrutura da Escola para o _j-ésimo_ município;
-  
-- $lnInvPublico_j$ -- logaritmo dos Investimentos Públicos em Educação para o _j-ésimo_ município;
-  
-- $lnIDEB_j$ -- logaritmo do Índice de Desenvolvimento da Educação Básica para o _j-ésimo_ município.
-  
+- para analisar o impacto dos Investimentos Públicos em Educação e da Infraestrutura Escolar no Desempenho Educacional: 
+        $$
+        lnIDEB_j = \beta_0 + \beta_1lnIIE_j + \beta_2lnInvPublico_j + \epsilon_j
+        $$
+
+  - $lnIIE_j$ -- logaritmo do Índice de Infraestrutura da Escola para o *j-ésimo* município;
+
+  - $lnInvPublico_j$ -- logaritmo dos Investimentos Públicos em Educação para o *j-ésimo* município;
+
+  - $lnIDEB_j$ -- logaritmo do Índice de Desenvolvimento da Educação Básica para o *j-ésimo* município.
+
+
 ## Resultados
 
-RESULTADOS ENCONTRADOS
+### Estatísticas descritivas do Índice de Infraestrutura Escolar (2009)
+
+As 5 melhores Unidades Federativas do Brasil:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+iie_2009 <- readr::read_rds("dados/11-iie-2009.rds")
+
+iie_2009 |> 
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media = round(mean(iie_09), 4),
+    mediana = round(median(iie_09), 4),
+    minimo = round(min(iie_09), 4),
+    maximo = round(max(iie_09), 4),
+    desvio_padrao = round(sd(iie_09), 4),
+    coeficiente_variacao = round(((desvio_padrao/media)*100), 2)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::filter(sigla_uf != "DF") |> 
+  dplyr::arrange(desc(media)) |> 
+  dplyr::slice_head(n = 5) |> 
+  dplyr::mutate(
+    sigla_uf = dplyr::case_when(
+      sigla_uf == "AC" ~ "Acre",
+      sigla_uf == "AL" ~ "Alagoas",
+      sigla_uf == "AM" ~ "Amazonas",
+      sigla_uf == "AP" ~ "Amapá",
+      sigla_uf == "BA" ~ "Bahia",
+      sigla_uf == "CE" ~ "Ceará",
+      sigla_uf == "ES" ~ "Espírito Santo",
+      sigla_uf == "GO" ~ "Goiás",
+      sigla_uf == "MA" ~ "Maranhão",
+      sigla_uf == "MG" ~ "Minas Gerais",
+      sigla_uf == "MS" ~ "Mato Grosso do Sul", 
+      sigla_uf == "MT" ~ "Mato Grosso",
+      sigla_uf == "PA" ~ "Pará",
+      sigla_uf == "PB" ~ "Paraíba",
+      sigla_uf == "PE" ~ "Pernambuco",
+      sigla_uf == "PI" ~ "Piauí",
+      sigla_uf == "PR" ~ "Paraná",
+      sigla_uf == "RJ" ~ "Rio de Janeiro",
+      sigla_uf == "RN" ~ "Rio Grande do Norte",
+      sigla_uf == "RO" ~ "Rondônia",
+      sigla_uf == "RR" ~ "Roraima",
+      sigla_uf == "RS" ~ "Rio Grande do Sul",
+      sigla_uf == "SC" ~ "Santa Catarina",
+      sigla_uf == "SE" ~ "Sergipe",
+      sigla_uf == "SP" ~ "São Paulo",
+      sigla_uf == "TO" ~ "Tocantins",
+      sigla_uf == "Brasil" ~ "Brasil"
+    ),
+    municipios = c(79, 645, 92, 497, 399)
+  ) |> 
+  dplyr::relocate(municipios, .after = sigla_uf) |> 
+  kableExtra::kbl(
+    col.names = c(
+      "Unidade Federativa",
+      "Total de Municípios",
+      "IIE",
+      "Mediana",
+      "Mínimo",
+      "Máximo",
+      "Desvio Padrão",
+      "Coeficiente de Variação (%)"
+    )
+  ) |> 
+  kableExtra::kable_styling(
+    full_width = TRUE, 
+    row_label_position = "c",
+    position = "center",
+    font_size = 16
+  )
+  
+```
+
+As 5 piores Unidades Federativas do Brasil:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+iie_2009 <- readr::read_rds("dados/11-iie-2009.rds")
+
+iie_2009 |> 
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media = round(mean(iie_09), 4),
+    mediana = round(median(iie_09), 4),
+    minimo = round(min(iie_09), 4),
+    maximo = round(max(iie_09), 4),
+    desvio_padrao = round(sd(iie_09), 4),
+    coeficiente_variacao = round(((desvio_padrao/media)*100), 2)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::filter(sigla_uf != "DF") |> 
+  dplyr::arrange(desc(media)) |> 
+  dplyr::slice_tail(n = 5) |> 
+  dplyr::mutate(
+    sigla_uf = dplyr::case_when(
+      sigla_uf == "AC" ~ "Acre",
+      sigla_uf == "AL" ~ "Alagoas",
+      sigla_uf == "AM" ~ "Amazonas",
+      sigla_uf == "AP" ~ "Amapá",
+      sigla_uf == "BA" ~ "Bahia",
+      sigla_uf == "CE" ~ "Ceará",
+      sigla_uf == "ES" ~ "Espírito Santo",
+      sigla_uf == "GO" ~ "Goiás",
+      sigla_uf == "MA" ~ "Maranhão",
+      sigla_uf == "MG" ~ "Minas Gerais",
+      sigla_uf == "MS" ~ "Mato Grosso do Sul", 
+      sigla_uf == "MT" ~ "Mato Grosso",
+      sigla_uf == "PA" ~ "Pará",
+      sigla_uf == "PB" ~ "Paraíba",
+      sigla_uf == "PE" ~ "Pernambuco",
+      sigla_uf == "PI" ~ "Piauí",
+      sigla_uf == "PR" ~ "Paraná",
+      sigla_uf == "RJ" ~ "Rio de Janeiro",
+      sigla_uf == "RN" ~ "Rio Grande do Norte",
+      sigla_uf == "RO" ~ "Rondônia",
+      sigla_uf == "RR" ~ "Roraima",
+      sigla_uf == "RS" ~ "Rio Grande do Sul",
+      sigla_uf == "SC" ~ "Santa Catarina",
+      sigla_uf == "SE" ~ "Sergipe",
+      sigla_uf == "SP" ~ "São Paulo",
+      sigla_uf == "TO" ~ "Tocantins",
+      sigla_uf == "Brasil" ~ "Brasil"
+    ),
+    municipios = c(224, 22, 144, 62, 217)
+  ) |> 
+  dplyr::relocate(municipios, .after = sigla_uf) |> 
+  kableExtra::kbl(
+    col.names = c(
+      "Unidade Federativa",
+      "Total de Municípios",
+      "IIE",
+      "Mediana",
+      "Mínimo",
+      "Máximo",
+      "Desvio Padrão",
+      "Coeficiente de Variação (%)"
+    )
+  ) |> 
+  kableExtra::kable_styling(
+    full_width = TRUE, 
+    row_label_position = "c",
+    position = "center",
+    font_size = 16
+  )
+  
+```
+
+E o Brasil:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+iie_2009 <- readr::read_rds("dados/11-iie-2009.rds")
+
+iie_2009 |> 
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media = round(mean(iie_09), 4),
+    mediana = round(median(iie_09), 4),
+    minimo = round(min(iie_09), 4),
+    maximo = round(max(iie_09), 4),
+    desvio_padrao = round(sd(iie_09), 4),
+    coeficiente_variacao = round(((desvio_padrao/media)*100), 2)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::mutate(
+    sigla_uf = "Brasil",
+    municipios = 5570,
+    media = round(mean(media), 4),
+    mediana = round(median(mediana), 4),
+    minimo = round(min(minimo), 4),
+    maximo = round(max(maximo), 4),
+    desvio_padrao = round(sd(desvio_padrao), 4),
+    coeficiente_variacao = round((desvio_padrao/media)*100, 2)
+  ) |> 
+  dplyr::slice_head(n = 1) |> 
+  dplyr::relocate(municipios, .after = sigla_uf) |> 
+    kableExtra::kbl(
+    col.names = c(
+      "Unidade Federativa",
+      "Total de Municípios",
+      "IIE",
+      "Mediana",
+      "Mínimo",
+      "Máximo",
+      "Desvio Padrão",
+      "Coeficiente de Variação (%)"
+    )
+  ) |> 
+  kableExtra::kable_styling(
+    full_width = TRUE, 
+    row_label_position = "c",
+    position = "center",
+    font_size = 16
+  )
+```
+
+
+## Resultados
+
+### Estatísticas descritivas do Índice de Infraestrutura Escolar (2019)
+
+As 5 melhores Unidades Federativas do Brasil:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+iie_2019 <- readr::read_rds("dados/12-iie-2019.rds")
+
+iie_2019 |> 
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media = round(mean(iie_19), 4),
+    mediana = round(median(iie_19), 4),
+    minimo = round(min(iie_19), 4),
+    maximo = round(max(iie_19), 4),
+    desvio_padrao = round(sd(iie_19), 4),
+    coeficiente_variacao = round(((desvio_padrao/media)*100), 2)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::filter(sigla_uf != "DF") |> 
+  dplyr::arrange(desc(media)) |> 
+  dplyr::slice_head(n = 5) |> 
+  dplyr::mutate(
+    sigla_uf = dplyr::case_when(
+      sigla_uf == "AC" ~ "Acre",
+      sigla_uf == "AL" ~ "Alagoas",
+      sigla_uf == "AM" ~ "Amazonas",
+      sigla_uf == "AP" ~ "Amapá",
+      sigla_uf == "BA" ~ "Bahia",
+      sigla_uf == "CE" ~ "Ceará",
+      sigla_uf == "ES" ~ "Espírito Santo",
+      sigla_uf == "GO" ~ "Goiás",
+      sigla_uf == "MA" ~ "Maranhão",
+      sigla_uf == "MG" ~ "Minas Gerais",
+      sigla_uf == "MS" ~ "Mato Grosso do Sul", 
+      sigla_uf == "MT" ~ "Mato Grosso",
+      sigla_uf == "PA" ~ "Pará",
+      sigla_uf == "PB" ~ "Paraíba",
+      sigla_uf == "PE" ~ "Pernambuco",
+      sigla_uf == "PI" ~ "Piauí",
+      sigla_uf == "PR" ~ "Paraná",
+      sigla_uf == "RJ" ~ "Rio de Janeiro",
+      sigla_uf == "RN" ~ "Rio Grande do Norte",
+      sigla_uf == "RO" ~ "Rondônia",
+      sigla_uf == "RR" ~ "Roraima",
+      sigla_uf == "RS" ~ "Rio Grande do Sul",
+      sigla_uf == "SC" ~ "Santa Catarina",
+      sigla_uf == "SE" ~ "Sergipe",
+      sigla_uf == "SP" ~ "São Paulo",
+      sigla_uf == "TO" ~ "Tocantins",
+      sigla_uf == "Brasil" ~ "Brasil"
+    ),
+    municipios = c(79, 645, 92, 497, 399)
+  ) |> 
+  dplyr::relocate(municipios, .after = sigla_uf) |> 
+  kableExtra::kbl(
+    col.names = c(
+      "Unidade Federativa",
+      "Total de Municípios",
+      "IIE",
+      "Mediana",
+      "Mínimo",
+      "Máximo",
+      "Desvio Padrão",
+      "Coeficiente de Variação (%)"
+    )
+  ) |> 
+  kableExtra::kable_styling(
+    full_width = TRUE, 
+    row_label_position = "c",
+    position = "center",
+    font_size = 16
+  )
+```
+
+As 5 piores Unidades Federativas do Brasil:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+iie_2019 <- readr::read_rds("dados/12-iie-2019.rds")
+
+iie_2019 |> 
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media = round(mean(iie_19), 4),
+    mediana = round(median(iie_19), 4),
+    minimo = round(min(iie_19), 4),
+    maximo = round(max(iie_19), 4),
+    desvio_padrao = round(sd(iie_19), 4),
+    coeficiente_variacao = round(((desvio_padrao/media)*100), 2)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::filter(sigla_uf != "DF") |> 
+  dplyr::arrange(desc(media)) |> 
+  dplyr::slice_tail(n = 5) |> 
+  dplyr::mutate(
+    sigla_uf = dplyr::case_when(
+      sigla_uf == "AC" ~ "Acre",
+      sigla_uf == "AL" ~ "Alagoas",
+      sigla_uf == "AM" ~ "Amazonas",
+      sigla_uf == "AP" ~ "Amapá",
+      sigla_uf == "BA" ~ "Bahia",
+      sigla_uf == "CE" ~ "Ceará",
+      sigla_uf == "ES" ~ "Espírito Santo",
+      sigla_uf == "GO" ~ "Goiás",
+      sigla_uf == "MA" ~ "Maranhão",
+      sigla_uf == "MG" ~ "Minas Gerais",
+      sigla_uf == "MS" ~ "Mato Grosso do Sul", 
+      sigla_uf == "MT" ~ "Mato Grosso",
+      sigla_uf == "PA" ~ "Pará",
+      sigla_uf == "PB" ~ "Paraíba",
+      sigla_uf == "PE" ~ "Pernambuco",
+      sigla_uf == "PI" ~ "Piauí",
+      sigla_uf == "PR" ~ "Paraná",
+      sigla_uf == "RJ" ~ "Rio de Janeiro",
+      sigla_uf == "RN" ~ "Rio Grande do Norte",
+      sigla_uf == "RO" ~ "Rondônia",
+      sigla_uf == "RR" ~ "Roraima",
+      sigla_uf == "RS" ~ "Rio Grande do Sul",
+      sigla_uf == "SC" ~ "Santa Catarina",
+      sigla_uf == "SE" ~ "Sergipe",
+      sigla_uf == "SP" ~ "São Paulo",
+      sigla_uf == "TO" ~ "Tocantins",
+      sigla_uf == "Brasil" ~ "Brasil"
+    ),
+    municipios = c(224, 22, 144, 62, 217)
+  ) |> 
+  dplyr::relocate(municipios, .after = sigla_uf) |> 
+  kableExtra::kbl(
+    col.names = c(
+      "Unidade Federativa",
+      "Total de Municípios",
+      "IIE",
+      "Mediana",
+      "Mínimo",
+      "Máximo",
+      "Desvio Padrão",
+      "Coeficiente de Variação (%)"
+    )
+  ) |> 
+  kableExtra::kable_styling(
+    full_width = TRUE, 
+    row_label_position = "c",
+    position = "center",
+    font_size = 16
+  )
+```
+
+E o Brasil:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+iie_2019 <- readr::read_rds("dados/12-iie-2019.rds")
+
+iie_2019 |> 
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media = round(mean(iie_19), 4),
+    mediana = round(median(iie_19), 4),
+    minimo = round(min(iie_19), 4),
+    maximo = round(max(iie_19), 4),
+    desvio_padrao = round(sd(iie_19), 4),
+    coeficiente_variacao = round(((desvio_padrao/media)*100), 2)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::mutate(
+    sigla_uf = "Brasil",
+    municipios = 5570,
+    media = round(mean(media), 4),
+    mediana = round(median(mediana), 4),
+    minimo = round(min(minimo), 4),
+    maximo = round(max(maximo), 4),
+    desvio_padrao = round(sd(desvio_padrao), 4),
+    coeficiente_variacao = round((desvio_padrao/media)*100, 2)
+  ) |> 
+  dplyr::slice_head(n = 1) |> 
+  dplyr::relocate(municipios, .after = sigla_uf) |> 
+    kableExtra::kbl(
+    col.names = c(
+      "Unidade Federativa",
+      "Total de Municípios",
+      "IIE",
+      "Mediana",
+      "Mínimo",
+      "Máximo",
+      "Desvio Padrão",
+      "Coeficiente de Variação (%)"
+    )
+  ) |> 
+  kableExtra::kable_styling(
+    full_width = TRUE, 
+    row_label_position = "c",
+    position = "center",
+    font_size = 16
+  )
+```
+
+
+## Resultados
+
+### Comparação dos Índices de Infraestrutura Escolar por Unidade Federativa
+
+::: columns
+::: {.column width="50%"}
+Em 2009:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+knitr::include_graphics("graficos-e-mapas_files/figure-html/mapa_iie_2009-1.png")
+```
+:::
+
+::: {.column width="50%"}
+Em 2019:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+knitr::include_graphics("graficos-e-mapas_files/figure-html/mapa_iie_2019-1.png")
+```
+:::
+:::
+
+Apesar de uma ligeira melhora, é possível perceber que as Regiões Norte e Nordeste apresentam os piores índices de Infraestrutura Escolar, enquanto que as Regiões Sul e Sudeste têm os melhores índices do país.
+
+
+## Resultados
+
+### Comparação das notas médias do Ideb por Unidade Federativa
+
+::: columns
+::: {.column width="50%"}
+Em 2009:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+knitr::include_graphics("graficos-e-mapas_files/figure-html/mapa_ideb_2009-1.png")
+```
+:::
+
+::: {.column width="50%"}
+Em 2019:
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+knitr::include_graphics("graficos-e-mapas_files/figure-html/mapa_ideb_2019-1.png")
+```
+:::
+:::
+
+É possível perceber que as Regiões Norte e Nordeste possuem as médias mais baixas, enquanto que as Regiões Centro-Oeste, Sudeste e Sul têm as notas médias mais elevadas.
+
+
+## Resultados {.center}
+
+### Impacto dos Investimentos Públicos em Educação na Infraestrutura Escolar
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+
+dados_muni <- readr::read_rds("dados/16-dados-muni-econometricos.rds")
+
+inv_infra_2009 <- lm(
+  formula = ln_iie_09 ~ ln_invpublico_09,
+  data = dados_muni
+)
+
+summary(inv_infra_2009)
+
+
+inv_infra_2019 <- lm(
+  formula = ln_iie_19 ~ ln_invpublico_19,
+  data = dados_muni
+)
+
+summary(inv_infra_2019)
+
+stargazer::stargazer(
+  inv_infra_2009, 
+  inv_infra_2019, 
+  type = "html",
+  omit = "observations",
+  column.labels	= c("2009", "2019")
+)
+```
+
+<table style="text-align:center"><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="2"><em>Variável Dependente:</em></td></tr>
+<tr><td></td><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td>2009</td><td>2019</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>lnInvPublico</em></td><td>0.015<sup>***</sup></td><td></td></tr>
+<tr><td style="text-align:left"></td><td>(0.005)</td><td></td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td style="text-align:left"><em>lnInvPublico</em></td><td></td><td>-0.023<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(0.003)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td style="text-align:left">Constante</td><td>-0.883<sup>***</sup></td><td>-0.009</td></tr>
+<tr><td style="text-align:left"></td><td>(0.082)</td><td>(0.053)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td style="text-align:left">R<sup>2</sup></td><td>0.002</td><td>0.011</td></tr>
+<!-- <tr><td style="text-align:left">R Ajustado<sup>2</sup></td><td>0.002</td><td>0.011</td></tr> -->
+<!-- <tr><td style="text-align:left">Erro Padrão Residual</td><td>0.355 (df = 5550)</td><td>0.238 (df = 5542)</td></tr> -->
+<!-- <tr><td style="text-align:left">Estatística F</td><td>10.224<sup>***</sup> (df = 1; 5550)</td><td>61.257<sup>***</sup> (df = 1; 5542)</td></tr> -->
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Nota:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+
+:::
+
+::: {.column width="50%"}
+
+- Há uma redução do impacto dos investimentos sobre o Índice de Infraestrutura Escolar (IIE), em 2019; 
+
+- Em 2009, um aumento de 1% nos Investimentos Públicos em Educação resultou em melhoria de 0,015% no IIE;
+
+- Em 2019, um aumento de 1% nos Investimentos Públicos em Educação produziu um efeito negativo de 0,023% no IIE.
+
+:::
+:::
+
+
+## Resultados {.center}
+
+### Impacto dos Investimentos Públicos em Educação na Infraestrutura Escolar
+
+- É importante observar que os Investimentos Públicos em Educação podem não levar, necessariamente, a uma melhoria esperada nos resultados em razão de:
+
+  - ineficiências na alocação dos recursos por parte de países com má governança [@rajkumar_public_2008];
+  
+  - fiscalização pouco efetiva dos recursos aplicados, compras superfaturadas ou desvio de verbas [@vasconcelos_infraestrutura_2020-1];
+  
+  - os recursos podem ser disperdiçados, não sendo utilizados para promover a melhora do aprendizado [@monteiro_gasto_2015].
+  
+- Mesmo que os coeficientes indiquem uma fraca relação entre os fatores estimados, não se pode dispensar de tais investimentos se a intenção é melhorar a infraestrutura das escolas brasileiras, sobretudo daquelas mais vulneráveis [@vasconcelos_infraestrutura_2020-1].
+
+
+## Resultados {.center}
+
+### Impacto dos Investimentos Públicos em Educação e da Infraestrutura Escolar no Desempenho Educacional
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+
+dados_muni <- readr::read_rds("dados/16-dados-muni-econometricos.rds")
+
+inv_infra_ideb_2009 <- lm(
+  formula = ln_ideb_09 ~ ln_iie_09 + ln_invpublico_09,
+  data = dados_muni
+)
+
+summary(inv_infra_ideb_2009)
+
+
+inv_infra_ideb_2019 <- lm(
+  formula = ln_ideb_19 ~ ln_iie_19 + ln_invpublico_19,
+  data = dados_muni
+)
+
+summary(inv_infra_ideb_2019)
+
+stargazer::stargazer(
+  inv_infra_ideb_2009, 
+  inv_infra_ideb_2019, 
+  type = "html",
+  column.labels	= c("2009", "2019")
+)
+```
+
+<table style="text-align:center"><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="2"><em>Variável Dependente:</em></td></tr>
+<tr><td></td><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td>2009</td><td>2019</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>lnIIE</em></td><td>0.402<sup>***</sup></td><td></td></tr>
+<tr><td style="text-align:left"></td><td>(0.006)</td><td></td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td style="text-align:left"><em>lnInvPublico</em></td><td>-0.016<sup>***</sup></td><td></td></tr>
+<tr><td style="text-align:left"></td><td>(0.002)</td><td></td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td style="text-align:left"><em>lnIIE</em></td><td></td><td>0.441<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(0.008)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td style="text-align:left"><em>lnInvPublico</em></td><td></td><td>-0.006<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(0.002)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td style="text-align:left">Constante</td><td>1.837<sup>***</sup></td><td>1.887<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.037)</td><td>(0.032)</td></tr>
+<tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td style="text-align:left">R<sup>2</sup></td><td>0.450</td><td>0.358</td></tr>
+<!-- <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.449</td><td>0.358</td></tr> -->
+<!-- <tr><td style="text-align:left">Residual Std. Error</td><td>0.158 (df = 5515)</td><td>0.143 (df = 5505)</td></tr> -->
+<!-- <tr><td style="text-align:left">F Statistic</td><td>2,252.924<sup>***</sup> (df = 2; 5515)</td><td>1,534.616<sup>***</sup> (df = 2; 5505)</td></tr> -->
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Nota:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+
+:::
+
+::: {.column width="50%"}
+
+- Há uma relação negativa entre Investimentos Públicos em Educação e o Ideb, com ligeira melhora no último ano;
+
+- Há um impacto positivo entre a Infraestrutura Escolar e o Desempenho Educacional: 
+
+  - em 2009, o aumento de 1% na Infraestrutura das escolas resultou em uma melhora de 0,402% na qualidade do ensino;
+  
+  - em 2019, o mesmo 1% investido em Infraestrutura converteu-se no aumento de 0,441% do Desempenho Escolar.
+
+:::
+
+::::
+
 
 ## Conclusão {.center}
 
-- A Infraestrutura das escolas públicas e os resultados do Ideb apresentaram melhoras entre os anos analisados -- 2009 e 2019;
+-   A Infraestrutura das escolas públicas e os resultados do Ideb apresentaram melhoras entre os anos analisados -- 2009 e 2019;
 
-- Ainda é possível observar um elevado nível de desigualdade entre as escolas públicas brasileiras;
+-   Ainda é possível observar um elevado nível de desigualdade entre as escolas públicas brasileiras;
 
-- As análises apresentam:
+-   As análises apresentam:
 
-  - uma importância significativa dos Investimentos Públicos em Educação para a Infraestrutura Escolar; 
-  
-  - uma relação significativa dos Investimentos Públicos e da Infraestrutura Escolar para o Desempenho Educacional;
-  
-  - a Infraestrutura Escolar possui uma importância superior no Desempenho Educacional quando comparado com os Investimentos Públicos em Educação.
-  
+    - uma fraca relação entre os Investimentos Públicos em Educação e a Infraestrutura Escolar;
+    
+    - um relação negativa entre Investimentos Públicos em Educação e o Desempenho no Ideb;
+    
+    - um impacto positivo da Infraestrutura Escolar e o Desempenho Educacional;
+
+    - a Infraestrutura Escolar possui uma importância superior no Desempenho Educacional quando comparado com os Investimentos Públicos em Educação.
+
 ## Conclusão {.center}
 
 Apesar de o Estado brasileiro ter demonstrado interesse na democratização do ensino público de qualidade, aumentando as despesas nos últimos anos e implementando ações de incentivo, a situação das escolas brasileira ainda é bastante deficiente.
 
 O rendimento do aluno não depende exclusivamente dele, cabe ao poder público disponibilizar os meios para as escolas possuírem uma estrutura básica para exercer suas atividades e que os alunos tenham ao seu alcance um ambiente favorável para o aprendizado.
 
-## Referências
+
+## Referências {.center}
 
 ```{r}
 # #| fig-align: "center"

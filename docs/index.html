@@ -334,6 +334,9 @@
       margin-right: 0; 
     }
   </style>
+  
+  <script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -358,104 +361,15 @@
 <section id="objetivos" class="slide level2 center">
 <h2>Objetivos</h2>
 <ul>
-<li class="fragment"><p>Identificar a relação existente entre os Investimentos Públicos em Educação e a Infraestrutura Escolar, nos anos de 2009 e 2019;</p></li>
-<li class="fragment"><p>Identificar a relação existente entre os Investimentos Públicos em Educação e a Infraestrutura Escolar com o Desempenho Educacional (Ideb) dos alunos matriculados nas escolas públicas brasileiras, nos anos de 2009 e 2019.</p></li>
-</ul>
-</section>
-<section id="metodologia" class="slide level2">
-<h2>Metodologia</h2>
-<h3 id="infraestrutura-escolar">Infraestrutura Escolar</h3>
-<table>
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Dimensão</th>
-<th style="text-align: center;">Indicador</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Infraestrutura de serviços básicos (ib)</td>
-<td style="text-align: center;">1. Local de funcionamento do prédio escolar<br>2. Existência de água rede pública<br>3. Existência de energia rede pública<br>4. Existência de esgoto rede pública<br>5. Existência de alimentação<br>6. Existência de coleta de lixo periódica<br>7. Acesso à internet</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Infraestrutura física (if)</td>
-<td style="text-align: center;">1. Existência de sala de professor<br>2. Existência de laboratório de informática<br>3. Existência de laboratório de ciências<br>4. Existência de quadra de esportes<br>5. Existência de cozinha<br>6. Existência de biblioteca<br>7. Existência de parque infantil<br>8. Existência de banheiro dentro do prédio</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Disponibilidade de equipamentos (de)</td>
-<td style="text-align: center;">1. Existência de equipamento de TV<br>2. Existência de equipamento de copiadora<br>3. Existência de equipamento de impressora<br>4. Existência de computador</td>
-</tr>
-</tbody>
-</table>
-<center>
-<font size="3">Fonte: Elaboração própria (2022) com base nos Censos Escolares (2009 e 2019) do Inep.</font>
-</center>
-</section>
-<section id="metodologia-1" class="slide level2 center">
-<h2>Metodologia</h2>
-<h3 id="infraestrutura-escolar-1">Infraestrutura Escolar</h3>
-<p>Baseado em Lima <span class="citation" data-cites="lima_gestao_2015">(<a href="#/ref-lima_gestao_2015" role="doc-biblioref" onclick="return false;">2015</a>)</span> e Vasconcelos et al. <span class="citation" data-cites="vasconcelos_infraestrutura_2020-1">(<a href="#/ref-vasconcelos_infraestrutura_2020-1" role="doc-biblioref" onclick="return false;">2020</a>)</span>, o cálculo do IIE é realizado em três etapas:</p>
-<div class="columns">
-<div class="column" style="width:45%;">
+<li class="fragment"><p>Comparar os Índices de Infraestrutura Escolar (IIE), a partir de estatísticas descritivas, das Unidades Federativas dos Brasil, nos anos de 2009 e 2019;</p></li>
+<li class="fragment"><p>Identificar a relação existente entre:</p>
 <ul>
-<li class="fragment"><p>é considerado a natureza binária de cada indicador (1 = existência do componente da escola, 0 = ausência) ;</p></li>
-<li class="fragment"><p>são elaborados subíndices para cada dimensão mediante a expressão ao lado;</p></li>
-<li class="fragment"><p>o IIE corresponde à média aritmética dos subíndices calculados;</p></li>
-<li class="fragment"><p>os valores variam entre 0 (ausência de todos os indicadores) e 1 (presença de todos os indicadores):</p>
-<ul>
-<li class="fragment">quando multiplicados por 100, podem ser interpretados na forma percentual.</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:55%;">
-<p><span class="math display">\[
-SIIE_{jp} = \dfrac{\sum^n_{i=1} E_{pij}}{\sum^n_{i=1} E_{maxij}}
-\]</span></p>
-<ul>
-<li class="fragment"><p><span class="math inline">\(SIIE_{jp}\)</span> = subíndice da Infraestrutura Escolar referente à <em>j-ésima</em> dimensão e à <em>p-ésima</em> escola;<br>
-</p></li>
-<li class="fragment"><p><span class="math inline">\(E_{pij}\)</span> = escore obtido pela <em>p-ésima</em> escola do <em>i-ésimo</em> indicador da <em>j-ésima</em> dimensão (0 ou 1);<br>
-</p></li>
-<li class="fragment"><p><span class="math inline">\(E_{maxij}\)</span> = escore máximo do <em>i-ésimo</em> indicador da <em>j-ésima</em> dimensão (no caso, 1);&nbsp;</p></li>
-<li class="fragment"><p><span class="math inline">\(j\)</span> = número de dimensões (1, 2, 3, …, m);<br>
-</p></li>
-<li class="fragment"><p><span class="math inline">\(p\)</span> = número de escolar (1, 2, 3, …, k);<br>
-</p></li>
-<li class="fragment"><p><span class="math inline">\(i\)</span> = número de indicadores da <em>j-ésima</em> dimensão (1, 2, 3, …, n).</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="metodologia-2" class="slide level2 center">
-<h2>Metodologia</h2>
-<h3 id="investimentos-públicos">Investimentos Públicos</h3>
-<ul>
-<li class="fragment"><p>Representa as despesas com educação;</p></li>
-<li class="fragment"><p>Incluem os recursos dos governos municipal, estadual e federal;</p></li>
-<li class="fragment"><p>É representado por duas séries de despesas:</p>
-<ul>
-<li class="fragment"><p>soma das despesas no período de 2004 a 2008, representando o ano de 2009;</p></li>
-<li class="fragment"><p>soma das despesas no período de 2014 a 2018, representando o ano de 2019.</p></li>
-</ul></li>
-<li class="fragment"><p>Os valores foram deflacionados através do Índice Geral de Preços (IGP-DI) da Fundação Getúlio Vargas (FGV), com base no mês de dezembro de 2019.</p></li>
-</ul>
-</section>
-<section id="metodologia-3" class="slide level2 center">
-<h2>Metodologia</h2>
-<h3 id="desempenho-educacional">Desempenho Educacional</h3>
-<ul>
-<li class="fragment"><p>Ideb dos municípios, limitado ao universo das escolas públicas;</p></li>
-<li class="fragment"><p>A fim de evitar possível viés nos valores pontuais do Ideb, foram adotados:</p>
-<ul>
-<li class="fragment"><p>valores médios das notas do Ideb nos anos de 2005, 2007 e 2009 para o ano de 2009;</p></li>
-<li class="fragment"><p>valores médios das notas do Ideb nos anos de 2015, 2017 e 2019 para o ano de 2019.</p></li>
+<li class="fragment"><p>Investimentos Públicos em Educação e Infraestrutura Escolar, nos anos de 2009 e 2019;</p></li>
+<li class="fragment"><p>Investimentos Públicos em Educação e Infraestrutura Escolar com Desempenho Educacional (Ideb) dos alunos matriculados nas escolas públicas brasileiras, nos anos de 2009 e 2019.</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="metodologia-4" class="slide level2 center">
+<section id="metodologia" class="slide level2 center">
 <h2>Metodologia</h2>
 <h3 id="fonte-dos-dados">Fonte dos Dados</h3>
 <table>
@@ -492,27 +406,940 @@ SIIE_{jp} = \dfrac{\sum^n_{i=1} E_{pij}}{\sum^n_{i=1} E_{maxij}}
 <font size="3">Fonte: Elaboração própria (2022)</font>
 </center>
 </section>
+<section id="metodologia-1" class="slide level2 smaller">
+<h2>Metodologia</h2>
+<h3 id="infraestrutura-escolar">Infraestrutura Escolar</h3>
+<p>Consiste em “instalações, equipamentos e serviços necessários para garantir o funcionamento da escola e auxiliar a aprendizagem do aluno” <span class="citation" data-cites="garcia_um_2014">(<a href="#/ref-garcia_um_2014" role="doc-biblioref" onclick="return false;">GARCIA, 2014, p. 155</a>)</span>.</p>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Dimensão</th>
+<th style="text-align: center;">Indicador</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Infraestrutura de serviços básicos (ib)</td>
+<td style="text-align: center;">1. Local de funcionamento do prédio escolar<br>2. Existência de água rede pública<br>3. Existência de energia rede pública<br>4. Existência de esgoto rede pública<br>5. Existência de alimentação<br>6. Existência de coleta de lixo periódica<br>7. Acesso à internet</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Infraestrutura física (if)</td>
+<td style="text-align: center;">1. Existência de sala de professor<br>2. Existência de laboratório de informática<br>3. Existência de laboratório de ciências<br>4. Existência de quadra de esportes<br>5. Existência de cozinha<br>6. Existência de biblioteca<br>7. Existência de parque infantil<br>8. Existência de banheiro dentro do prédio</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Disponibilidade de equipamentos (de)</td>
+<td style="text-align: center;">1. Existência de equipamento de TV<br>2. Existência de equipamento de copiadora<br>3. Existência de equipamento de impressora<br>4. Existência de computador</td>
+</tr>
+</tbody>
+</table>
+<center>
+<font size="3">Fonte: Elaboração própria (2022) com base nos Censos Escolares (2009 e 2019) do Inep.</font>
+</center>
+</section>
+<section id="metodologia-2" class="slide level2 center">
+<h2>Metodologia</h2>
+<h3 id="infraestrutura-escolar-1">Infraestrutura Escolar</h3>
+<p>Baseado em Lima <span class="citation" data-cites="lima_gestao_2015">(<a href="#/ref-lima_gestao_2015" role="doc-biblioref" onclick="return false;">2015</a>)</span> e Vasconcelos et al. <span class="citation" data-cites="vasconcelos_infraestrutura_2020-1">(<a href="#/ref-vasconcelos_infraestrutura_2020-1" role="doc-biblioref" onclick="return false;">2020</a>)</span>, o cálculo do IIE é realizado em três etapas:</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li class="fragment"><p>é considerado a natureza binária de cada indicador (1 = existência do componente da escola, 0 = ausência) ;</p></li>
+<li class="fragment"><p>são elaborados subíndices para cada dimensão mediante a expressão ao lado;</p></li>
+<li class="fragment"><p>o IIE corresponde à média aritmética dos subíndices calculados;</p></li>
+<li class="fragment"><p>os valores variam entre 0 (ausência de todos os indicadores) e 1 (presença de todos os indicadores):</p>
+<ul>
+<li class="fragment">quando multiplicados por 100, podem ser interpretados na forma percentual.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:55%;">
+<p><span class="math display">\[
+SIIE_{jp} = \dfrac{\sum^n_{i=1} E_{pij}}{\sum^n_{i=1} E_{maxij}}
+\]</span></p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(SIIE_{jp}\)</span> = subíndice da Infraestrutura Escolar referente à <em>j-ésima</em> dimensão e à <em>p-ésima</em> escola;<br>
+</p></li>
+<li class="fragment"><p><span class="math inline">\(E_{pij}\)</span> = escore obtido pela <em>p-ésima</em> escola do <em>i-ésimo</em> indicador da <em>j-ésima</em> dimensão (0 ou 1);<br>
+</p></li>
+<li class="fragment"><p><span class="math inline">\(E_{maxij}\)</span> = escore máximo do <em>i-ésimo</em> indicador da <em>j-ésima</em> dimensão (no caso, 1);&nbsp;</p></li>
+<li class="fragment"><p><span class="math inline">\(j\)</span> = número de dimensões (1, 2, 3, …, m);<br>
+</p></li>
+<li class="fragment"><p><span class="math inline">\(p\)</span> = número de escolar (1, 2, 3, …, k);<br>
+</p></li>
+<li class="fragment"><p><span class="math inline">\(i\)</span> = número de indicadores da <em>j-ésima</em> dimensão (1, 2, 3, …, n).</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="metodologia-3" class="slide level2 center">
+<h2>Metodologia</h2>
+<h3 id="investimentos-públicos">Investimentos Públicos</h3>
+<ul>
+<li class="fragment"><p>Representa as despesas com educação;</p></li>
+<li class="fragment"><p>Incluem os recursos dos governos municipal, estadual e federal;</p></li>
+<li class="fragment"><p>É representado por duas séries de despesas:</p>
+<ul>
+<li class="fragment"><p>soma das despesas no período de 2004 a 2008, representando o ano de 2009;</p></li>
+<li class="fragment"><p>soma das despesas no período de 2014 a 2018, representando o ano de 2019.</p></li>
+</ul></li>
+<li class="fragment"><p>Os valores foram deflacionados através do Índice Geral de Preços (IGP-DI) da Fundação Getúlio Vargas (FGV), com base no mês de dezembro de 2019.</p></li>
+</ul>
+</section>
+<section id="metodologia-4" class="slide level2 center">
+<h2>Metodologia</h2>
+<h3 id="desempenho-educacional">Desempenho Educacional</h3>
+<p>O Índice de Desenvolvimento da Educação Básica (Ideb) é um indicador de qualidade educacional, padronizado entre zero e dez, que reúne os resultados do fluxo escolar (aprovação), obtidos a partir dos dados do Censo Escolar, e das médias de desempenho nas avaliações padronizadas do Saeb.</p>
+<ul>
+<li class="fragment"><p>Ideb dos municípios, limitado ao universo das escolas públicas;</p></li>
+<li class="fragment"><p>A fim de evitar possível viés nos valores pontuais do Ideb, foram adotados:</p>
+<ul>
+<li class="fragment"><p>valores médios das notas do Ideb nos anos de 2005, 2007 e 2009 para o ano de 2009;</p></li>
+<li class="fragment"><p>valores médios das notas do Ideb nos anos de 2015, 2017 e 2019 para o ano de 2019.</p></li>
+</ul></li>
+</ul>
+</section>
 <section id="metodologia-5" class="slide level2 center">
 <h2>Metodologia</h2>
 <h3 id="modelo-econométrico">Modelo Econométrico</h3>
+<p>Foram estimados, através do método de Mínimos Quadrados Ordinários (MQO), dois modelos para os anos de 2009 e 2019:</p>
 <ul>
-<li class="fragment"><p>Foram estimados, através do método de Mínimos Quadrados Ordinários (MQO), dois modelos para os anos de 2009 e 2019:</p>
-<ol type="1">
 <li class="fragment"><p>para analisar o impacto dos Investimentos Públicos em Educação na Infraestrutura Escolar: <span class="math display">\[
-lnIIE_j = \beta_0 + \beta_1lnInvPublico_j + \epsilon_j
-\]</span></p></li>
+      lnIIE_j = \beta_0 + \beta_1lnInvPublico_j + \epsilon_j
+      \]</span></p></li>
 <li class="fragment"><p>para analisar o impacto dos Investimentos Públicos em Educação e da Infraestrutura Escolar no Desempenho Educacional: <span class="math display">\[
-lnIDEB_j = \beta_0 + \beta_1lnIIE_j + \beta_2lnInvPublico_j + \epsilon_j
-\]</span></p></li>
-</ol></li>
+      lnIDEB_j = \beta_0 + \beta_1lnIIE_j + \beta_2lnInvPublico_j + \epsilon_j
+      \]</span></p>
+<ul>
 <li class="fragment"><p><span class="math inline">\(lnIIE_j\)</span> – logaritmo do Índice de Infraestrutura da Escola para o <em>j-ésimo</em> município;</p></li>
 <li class="fragment"><p><span class="math inline">\(lnInvPublico_j\)</span> – logaritmo dos Investimentos Públicos em Educação para o <em>j-ésimo</em> município;</p></li>
 <li class="fragment"><p><span class="math inline">\(lnIDEB_j\)</span> – logaritmo do Índice de Desenvolvimento da Educação Básica para o <em>j-ésimo</em> município.</p></li>
+</ul></li>
 </ul>
 </section>
 <section id="resultados" class="slide level2">
 <h2>Resultados</h2>
-<p>RESULTADOS ENCONTRADOS</p>
+<h3 id="estatísticas-descritivas-do-índice-de-infraestrutura-escolar-2009">Estatísticas descritivas do Índice de Infraestrutura Escolar (2009)</h3>
+<p>As 5 melhores Unidades Federativas do Brasil:</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Unidade Federativa </th>
+   <th style="text-align:right;"> Total de Municípios </th>
+   <th style="text-align:right;"> IIE </th>
+   <th style="text-align:right;"> Mediana </th>
+   <th style="text-align:right;"> Mínimo </th>
+   <th style="text-align:right;"> Máximo </th>
+   <th style="text-align:right;"> Desvio Padrão </th>
+   <th style="text-align:right;"> Coeficiente de Variação (%) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Mato Grosso do Sul </td>
+   <td style="text-align:right;"> 79 </td>
+   <td style="text-align:right;"> 0.7551 </td>
+   <td style="text-align:right;"> 0.7917 </td>
+   <td style="text-align:right;"> 0.1667 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1402 </td>
+   <td style="text-align:right;"> 18.57 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> São Paulo </td>
+   <td style="text-align:right;"> 645 </td>
+   <td style="text-align:right;"> 0.7392 </td>
+   <td style="text-align:right;"> 0.7917 </td>
+   <td style="text-align:right;"> 0.1250 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1489 </td>
+   <td style="text-align:right;"> 20.14 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Rio de Janeiro </td>
+   <td style="text-align:right;"> 92 </td>
+   <td style="text-align:right;"> 0.7374 </td>
+   <td style="text-align:right;"> 0.7917 </td>
+   <td style="text-align:right;"> 0.1667 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1766 </td>
+   <td style="text-align:right;"> 23.95 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Rio Grande do Sul </td>
+   <td style="text-align:right;"> 497 </td>
+   <td style="text-align:right;"> 0.7061 </td>
+   <td style="text-align:right;"> 0.7500 </td>
+   <td style="text-align:right;"> 0.0417 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.2076 </td>
+   <td style="text-align:right;"> 29.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Paraná </td>
+   <td style="text-align:right;"> 399 </td>
+   <td style="text-align:right;"> 0.7050 </td>
+   <td style="text-align:right;"> 0.7500 </td>
+   <td style="text-align:right;"> 0.0833 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1880 </td>
+   <td style="text-align:right;"> 26.67 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>As 5 piores Unidades Federativas do Brasil:</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Unidade Federativa </th>
+   <th style="text-align:right;"> Total de Municípios </th>
+   <th style="text-align:right;"> IIE </th>
+   <th style="text-align:right;"> Mediana </th>
+   <th style="text-align:right;"> Mínimo </th>
+   <th style="text-align:right;"> Máximo </th>
+   <th style="text-align:right;"> Desvio Padrão </th>
+   <th style="text-align:right;"> Coeficiente de Variação (%) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Piauí </td>
+   <td style="text-align:right;"> 224 </td>
+   <td style="text-align:right;"> 0.3724 </td>
+   <td style="text-align:right;"> 0.2917 </td>
+   <td style="text-align:right;"> 0.0417 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.2056 </td>
+   <td style="text-align:right;"> 55.21 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Acre </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 0.3281 </td>
+   <td style="text-align:right;"> 0.2083 </td>
+   <td style="text-align:right;"> 0.0417 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.2230 </td>
+   <td style="text-align:right;"> 67.97 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Pará </td>
+   <td style="text-align:right;"> 144 </td>
+   <td style="text-align:right;"> 0.3164 </td>
+   <td style="text-align:right;"> 0.2500 </td>
+   <td style="text-align:right;"> 0.0000 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.1993 </td>
+   <td style="text-align:right;"> 62.99 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Amazonas </td>
+   <td style="text-align:right;"> 62 </td>
+   <td style="text-align:right;"> 0.3128 </td>
+   <td style="text-align:right;"> 0.2083 </td>
+   <td style="text-align:right;"> 0.0000 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.2355 </td>
+   <td style="text-align:right;"> 75.29 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Maranhão </td>
+   <td style="text-align:right;"> 217 </td>
+   <td style="text-align:right;"> 0.3081 </td>
+   <td style="text-align:right;"> 0.2500 </td>
+   <td style="text-align:right;"> 0.0000 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.1896 </td>
+   <td style="text-align:right;"> 61.54 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>E o Brasil:</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Unidade Federativa </th>
+   <th style="text-align:right;"> Total de Municípios </th>
+   <th style="text-align:right;"> IIE </th>
+   <th style="text-align:right;"> Mediana </th>
+   <th style="text-align:right;"> Mínimo </th>
+   <th style="text-align:right;"> Máximo </th>
+   <th style="text-align:right;"> Desvio Padrão </th>
+   <th style="text-align:right;"> Coeficiente de Variação (%) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Brasil </td>
+   <td style="text-align:right;"> 5570 </td>
+   <td style="text-align:right;"> 0.5269 </td>
+   <td style="text-align:right;"> 0.4167 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.0412 </td>
+   <td style="text-align:right;"> 7.82 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="resultados-1" class="slide level2">
+<h2>Resultados</h2>
+<h3 id="estatísticas-descritivas-do-índice-de-infraestrutura-escolar-2019">Estatísticas descritivas do Índice de Infraestrutura Escolar (2019)</h3>
+<p>As 5 melhores Unidades Federativas do Brasil:</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Unidade Federativa </th>
+   <th style="text-align:right;"> Total de Municípios </th>
+   <th style="text-align:right;"> IIE </th>
+   <th style="text-align:right;"> Mediana </th>
+   <th style="text-align:right;"> Mínimo </th>
+   <th style="text-align:right;"> Máximo </th>
+   <th style="text-align:right;"> Desvio Padrão </th>
+   <th style="text-align:right;"> Coeficiente de Variação (%) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Rio de Janeiro </td>
+   <td style="text-align:right;"> 79 </td>
+   <td style="text-align:right;"> 0.7772 </td>
+   <td style="text-align:right;"> 0.7917 </td>
+   <td style="text-align:right;"> 0.2500 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1320 </td>
+   <td style="text-align:right;"> 16.98 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mato Grosso do Sul </td>
+   <td style="text-align:right;"> 645 </td>
+   <td style="text-align:right;"> 0.7759 </td>
+   <td style="text-align:right;"> 0.7917 </td>
+   <td style="text-align:right;"> 0.2500 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1268 </td>
+   <td style="text-align:right;"> 16.34 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Paraná </td>
+   <td style="text-align:right;"> 92 </td>
+   <td style="text-align:right;"> 0.7722 </td>
+   <td style="text-align:right;"> 0.7917 </td>
+   <td style="text-align:right;"> 0.1667 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1262 </td>
+   <td style="text-align:right;"> 16.34 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Goiás </td>
+   <td style="text-align:right;"> 497 </td>
+   <td style="text-align:right;"> 0.7558 </td>
+   <td style="text-align:right;"> 0.7917 </td>
+   <td style="text-align:right;"> 0.0417 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1210 </td>
+   <td style="text-align:right;"> 16.01 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Santa Catarina </td>
+   <td style="text-align:right;"> 399 </td>
+   <td style="text-align:right;"> 0.7553 </td>
+   <td style="text-align:right;"> 0.7917 </td>
+   <td style="text-align:right;"> 0.2083 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1367 </td>
+   <td style="text-align:right;"> 18.10 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>As 5 piores Unidades Federativas do Brasil:</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Unidade Federativa </th>
+   <th style="text-align:right;"> Total de Municípios </th>
+   <th style="text-align:right;"> IIE </th>
+   <th style="text-align:right;"> Mediana </th>
+   <th style="text-align:right;"> Mínimo </th>
+   <th style="text-align:right;"> Máximo </th>
+   <th style="text-align:right;"> Desvio Padrão </th>
+   <th style="text-align:right;"> Coeficiente de Variação (%) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Maranhão </td>
+   <td style="text-align:right;"> 224 </td>
+   <td style="text-align:right;"> 0.4285 </td>
+   <td style="text-align:right;"> 0.4167 </td>
+   <td style="text-align:right;"> 0.0000 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.1914 </td>
+   <td style="text-align:right;"> 44.67 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Pará </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 0.4232 </td>
+   <td style="text-align:right;"> 0.4167 </td>
+   <td style="text-align:right;"> 0.0417 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.2180 </td>
+   <td style="text-align:right;"> 51.51 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Roraima </td>
+   <td style="text-align:right;"> 144 </td>
+   <td style="text-align:right;"> 0.4043 </td>
+   <td style="text-align:right;"> 0.3750 </td>
+   <td style="text-align:right;"> 0.0000 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.2954 </td>
+   <td style="text-align:right;"> 73.06 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Amazonas </td>
+   <td style="text-align:right;"> 62 </td>
+   <td style="text-align:right;"> 0.3803 </td>
+   <td style="text-align:right;"> 0.2917 </td>
+   <td style="text-align:right;"> 0.0417 </td>
+   <td style="text-align:right;"> 1.0000 </td>
+   <td style="text-align:right;"> 0.2473 </td>
+   <td style="text-align:right;"> 65.03 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Acre </td>
+   <td style="text-align:right;"> 217 </td>
+   <td style="text-align:right;"> 0.3769 </td>
+   <td style="text-align:right;"> 0.2917 </td>
+   <td style="text-align:right;"> 0.0417 </td>
+   <td style="text-align:right;"> 0.9583 </td>
+   <td style="text-align:right;"> 0.2359 </td>
+   <td style="text-align:right;"> 62.59 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>E o Brasil:</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Unidade Federativa </th>
+   <th style="text-align:right;"> Total de Municípios </th>
+   <th style="text-align:right;"> IIE </th>
+   <th style="text-align:right;"> Mediana </th>
+   <th style="text-align:right;"> Mínimo </th>
+   <th style="text-align:right;"> Máximo </th>
+   <th style="text-align:right;"> Desvio Padrão </th>
+   <th style="text-align:right;"> Coeficiente de Variação (%) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Brasil </td>
+   <td style="text-align:right;"> 5570 </td>
+   <td style="text-align:right;"> 0.6261 </td>
+   <td style="text-align:right;"> 0.6667 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.0466 </td>
+   <td style="text-align:right;"> 7.44 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="resultados-2" class="slide level2">
+<h2>Resultados</h2>
+<h3 id="comparação-dos-índices-de-infraestrutura-escolar-por-unidade-federativa">Comparação dos Índices de Infraestrutura Escolar por Unidade Federativa</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Em 2009:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="graficos-e-mapas_files/figure-html/mapa_iie_2009-1.png" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Em 2019:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="graficos-e-mapas_files/figure-html/mapa_iie_2019-1.png" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+<p>Apesar de uma ligeira melhora, é possível perceber que as Regiões Norte e Nordeste apresentam os piores índices de Infraestrutura Escolar, enquanto que as Regiões Sul e Sudeste têm os melhores índices do país.</p>
+</section>
+<section id="resultados-3" class="slide level2">
+<h2>Resultados</h2>
+<h3 id="comparação-das-notas-médias-do-ideb-por-unidade-federativa">Comparação das notas médias do Ideb por Unidade Federativa</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Em 2009:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="graficos-e-mapas_files/figure-html/mapa_ideb_2009-1.png" width="672"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Em 2019:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="graficos-e-mapas_files/figure-html/mapa_ideb_2019-1.png" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+<p>É possível perceber que as Regiões Norte e Nordeste possuem as médias mais baixas, enquanto que as Regiões Centro-Oeste, Sudeste e Sul têm as notas médias mais elevadas.</p>
+</section>
+<section id="resultados-4" class="slide level2 center">
+<h2>Resultados</h2>
+<h3 id="impacto-dos-investimentos-públicos-em-educação-na-infraestrutura-escolar">Impacto dos Investimentos Públicos em Educação na Infraestrutura Escolar</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+
+</div>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Variável Dependente:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+2009
+</td>
+<td>
+2019
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>lnInvPublico</em>
+</td>
+<td>
+0.015<sup>***</sup>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.005)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>lnInvPublico</em>
+</td>
+<td>
+</td>
+<td>
+-0.023<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+(0.003)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constante
+</td>
+<td>
+-0.883<sup>***</sup>
+</td>
+<td>
+-0.009
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.082)
+</td>
+<td>
+(0.053)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.002
+</td>
+<td>
+0.011
+</td>
+</tr>
+<!-- <tr><td style="text-align:left">R Ajustado<sup>2</sup></td><td>0.002</td><td>0.011</td></tr> -->
+<!-- <tr><td style="text-align:left">Erro Padrão Residual</td><td>0.355 (df = 5550)</td><td>0.238 (df = 5542)</td></tr> -->
+<!-- <tr><td style="text-align:left">Estatística F</td><td>10.224<sup>***</sup> (df = 1; 5550)</td><td>61.257<sup>***</sup> (df = 1; 5542)</td></tr> -->
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Nota:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><p>Há uma redução do impacto dos investimentos sobre o Índice de Infraestrutura Escolar (IIE), em 2019;</p></li>
+<li class="fragment"><p>Em 2009, um aumento de 1% nos Investimentos Públicos em Educação resultou em melhoria de 0,015% no IIE;</p></li>
+<li class="fragment"><p>Em 2019, um aumento de 1% nos Investimentos Públicos em Educação produziu um efeito negativo de 0,023% no IIE.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="resultados-5" class="slide level2 center">
+<h2>Resultados</h2>
+<h3 id="impacto-dos-investimentos-públicos-em-educação-na-infraestrutura-escolar-1">Impacto dos Investimentos Públicos em Educação na Infraestrutura Escolar</h3>
+<ul>
+<li class="fragment"><p>É importante observar que os Investimentos Públicos em Educação podem não levar, necessariamente, a uma melhoria esperada nos resultados em razão de:</p>
+<ul>
+<li class="fragment"><p>ineficiências na alocação dos recursos por parte de países com má governança <span class="citation" data-cites="rajkumar_public_2008">(<a href="#/ref-rajkumar_public_2008" role="doc-biblioref" onclick="return false;">RAJKUMAR; SWAROOP, 2008</a>)</span>;</p></li>
+<li class="fragment"><p>fiscalização pouco efetiva dos recursos aplicados, compras superfaturadas ou desvio de verbas <span class="citation" data-cites="vasconcelos_infraestrutura_2020-1">(<a href="#/ref-vasconcelos_infraestrutura_2020-1" role="doc-biblioref" onclick="return false;">VASCONCELOS et al., 2020</a>)</span>;</p></li>
+<li class="fragment"><p>os recursos podem ser disperdiçados, não sendo utilizados para promover a melhora do aprendizado <span class="citation" data-cites="monteiro_gasto_2015">(<a href="#/ref-monteiro_gasto_2015" role="doc-biblioref" onclick="return false;">MONTEIRO, 2015</a>)</span>.</p></li>
+</ul></li>
+<li class="fragment"><p>Mesmo que os coeficientes indiquem uma fraca relação entre os fatores estimados, não se pode dispensar de tais investimentos se a intenção é melhorar a infraestrutura das escolas brasileiras, sobretudo daquelas mais vulneráveis <span class="citation" data-cites="vasconcelos_infraestrutura_2020-1">(<a href="#/ref-vasconcelos_infraestrutura_2020-1" role="doc-biblioref" onclick="return false;">VASCONCELOS et al., 2020</a>)</span>.</p></li>
+</ul>
+</section>
+<section id="resultados-6" class="slide level2 center">
+<h2>Resultados</h2>
+<h3 id="impacto-dos-investimentos-públicos-em-educação-e-da-infraestrutura-escolar-no-desempenho-educacional">Impacto dos Investimentos Públicos em Educação e da Infraestrutura Escolar no Desempenho Educacional</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+
+</div>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Variável Dependente:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+2009
+</td>
+<td>
+2019
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>lnIIE</em>
+</td>
+<td>
+0.402<sup>***</sup>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.006)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>lnInvPublico</em>
+</td>
+<td>
+-0.016<sup>***</sup>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.002)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>lnIIE</em>
+</td>
+<td>
+</td>
+<td>
+0.441<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+(0.008)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>lnInvPublico</em>
+</td>
+<td>
+</td>
+<td>
+-0.006<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+(0.002)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constante
+</td>
+<td>
+1.837<sup>***</sup>
+</td>
+<td>
+1.887<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.037)
+</td>
+<td>
+(0.032)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.450
+</td>
+<td>
+0.358
+</td>
+</tr>
+<!-- <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.449</td><td>0.358</td></tr> -->
+<!-- <tr><td style="text-align:left">Residual Std. Error</td><td>0.158 (df = 5515)</td><td>0.143 (df = 5505)</td></tr> -->
+<!-- <tr><td style="text-align:left">F Statistic</td><td>2,252.924<sup>***</sup> (df = 2; 5515)</td><td>1,534.616<sup>***</sup> (df = 2; 5505)</td></tr> -->
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Nota:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><p>Há uma relação negativa entre Investimentos Públicos em Educação e o Ideb, com ligeira melhora no último ano;</p></li>
+<li class="fragment"><p>Há um impacto positivo entre a Infraestrutura Escolar e o Desempenho Educacional:</p>
+<ul>
+<li class="fragment"><p>em 2009, o aumento de 1% na Infraestrutura das escolas resultou em uma melhora de 0,402% na qualidade do ensino;</p></li>
+<li class="fragment"><p>em 2019, o mesmo 1% investido em Infraestrutura converteu-se no aumento de 0,441% do Desempenho Escolar.</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="conclusão" class="slide level2 center">
 <h2>Conclusão</h2>
@@ -521,8 +1348,9 @@ lnIDEB_j = \beta_0 + \beta_1lnIIE_j + \beta_2lnInvPublico_j + \epsilon_j
 <li class="fragment"><p>Ainda é possível observar um elevado nível de desigualdade entre as escolas públicas brasileiras;</p></li>
 <li class="fragment"><p>As análises apresentam:</p>
 <ul>
-<li class="fragment"><p>uma importância significativa dos Investimentos Públicos em Educação para a Infraestrutura Escolar;</p></li>
-<li class="fragment"><p>uma relação significativa dos Investimentos Públicos e da Infraestrutura Escolar para o Desempenho Educacional;</p></li>
+<li class="fragment"><p>uma fraca relação entre os Investimentos Públicos em Educação e a Infraestrutura Escolar;</p></li>
+<li class="fragment"><p>um relação negativa entre Investimentos Públicos em Educação e o Desempenho no Ideb;</p></li>
+<li class="fragment"><p>um impacto positivo da Infraestrutura Escolar e o Desempenho Educacional;</p></li>
 <li class="fragment"><p>a Infraestrutura Escolar possui uma importância superior no Desempenho Educacional quando comparado com os Investimentos Públicos em Educação.</p></li>
 </ul></li>
 </ul>
@@ -553,14 +1381,23 @@ BRASIL. <strong>Constituição da <span>República Federativa</span> do <span>Br
 <div id="ref-brasil_lei_1996" class="csl-entry" role="doc-biblioentry">
 BRASIL. <strong>Lei n 9.394, de 20 de dezembro de 1996. <span>Estabelece</span> as diretrizes e bases da educação nacional</strong>, 1996.
 </div>
+<div id="ref-garcia_um_2014" class="csl-entry" role="doc-biblioentry">
+GARCIA, P. Um <span>Estudo De Caso Analisando A Infraestrutura Das Escolas De Ensino Fundamental</span>. <strong>Pesquisa Odontológica Brasileira</strong>, v. 9, Dec. 2014.
+</div>
 <div id="ref-lima_da_2011" class="csl-entry" role="doc-biblioentry">
 LIMA, L. A. <a href="https://doi.org/10.24109/2176-6681.rbep.92i231.532"><span>Da universalização do ensino fundamental ao desafio de democratizar o ensino médio em 2016: o que evidenciam as estatísticas?</span></a> <strong>Revista Brasileira de Estudos Pedagógicos</strong>, v. 92, n. 231, Aug. 2011.
 </div>
 <div id="ref-lima_gestao_2015" class="csl-entry" role="doc-biblioentry">
 LIMA, P. V. P. S. et al. <a href="https://doi.org/10.18764/2178-2865.v18n2p399-414"><span>GESTAO MUNICIPAL DA SEGURANÇA PÚBLICA: responsabilidade dos municípios brasileiros no combate à violência</span></a>. <strong>Revista de Políticas Públicas</strong>, v. 18, n. 2, p. 399–414, Feb. 2015.
 </div>
+<div id="ref-monteiro_gasto_2015" class="csl-entry" role="doc-biblioentry">
+MONTEIRO, J. <a href="https://doi.org/10.5935/0034-7140.20150022"><span>Gasto Público em Educação e Desempenho Escolar</span></a>. <strong>Revista Brasileira de Economia</strong>, v. 69, p. 467–488, 2015.
+</div>
 <div id="ref-paula_fatores_2018" class="csl-entry" role="doc-biblioentry">
 PAULA, J. S. DE; FRANCO, A. M. DE P.; SILVA, J. W. DA. <a href="https://doi.org/10.18222/eae.v29i72.4928"><span>Fatores relacionados ao atraso escolar no estado de Minas Gerais</span></a>. <strong>Estudos em Avaliação Educacional</strong>, v. 29, n. 72, p. 886–917, 2018.
+</div>
+<div id="ref-rajkumar_public_2008" class="csl-entry" role="doc-biblioentry">
+RAJKUMAR, A. S.; SWAROOP, V. <a href="https://doi.org/10.1016/j.jdeveco.2007.08.003">Public spending and outcomes: <span>Does</span> governance matter?</a> <strong>Journal of Development Economics</strong>, v. 86, n. 1, p. 96–111, Apr. 2008.
 </div>
 <div id="ref-vasconcelos_infraestrutura_2020-1" class="csl-entry" role="doc-biblioentry">
 VASCONCELOS, J. C. et al. <a href="https://doi.org/10.1590/S0104-40362020002802245"><span>Infraestrutura escolar e investimentos públicos em Educação no Brasil: a importância para o desempenho educacional</span></a>. <strong>Ensaio: Avaliação e Políticas Públicas em Educação</strong>, v. 29, p. 874–898, Sep. 2020.
