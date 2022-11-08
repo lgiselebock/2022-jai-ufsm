@@ -1,0 +1,200 @@
+---
+title: "graficos-e-mapas"
+format: html
+---
+
+### Comparação do Índice de Infraestrutura Escolar entre  os anos de 2009 e 2019
+
+Em 2009:
+```{r mapa_iie_2009}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-dpi: 600
+
+mapa_estados_2009 <- geobr::read_state(code_state = "all", year = 2010, showProgress = FALSE)
+iie_2009 <- readr::read_rds("dados/11-iie-2009.rds")
+
+palette <- c("#CAF0F8", "#90E0EF", "#00B4D8", "#0096C7", "#0077B6", "#03045E")
+
+iie_2009 |> 
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media = round(mean(iie_09), 4),
+    mediana = round(median(iie_09), 4),
+    minimo = round(min(iie_09), 4),
+    maximo = round(max(iie_09), 4),
+    desvio_padrao = round(sd(iie_09), 4),
+    coeficiente_variacao = round(((desvio_padrao/media)*100), 2)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::mutate(
+    faixa = dplyr::case_when(
+      media > 0 & media <= 0.4 ~ "0.4",
+      media > 0.4 & media <= 0.5 ~ "0.5",
+      media > 0.5 & media <= 0.6 ~ "0.6",
+      media > 0.6 & media <= 0.7 ~ "0.7", 
+      media > 0.7 & media <= 0.8 ~ "0.8",
+      TRUE ~ "1.0"
+    )
+  ) |> 
+  dplyr::right_join(mapa_estados_2009, by = c("sigla_uf" = "abbrev_state")) |> 
+  ggplot2::ggplot() +
+  ggplot2::geom_sf(
+    ggplot2::aes(geometry = geom, fill = faixa)
+  ) +
+  ggplot2::scale_fill_manual(
+    values = palette,
+    guide = ggplot2::guide_legend(title = "IIE", title.hjust = 0.5),
+  ) +
+  # ggplot2::scale_fill_viridis_c(
+  #   guide = ggplot2::guide_legend(title = "IIE", title.hjust = 0.5, reverse = TRUE)
+  # ) + 
+  ggplot2::theme_void() +
+  ggplot2::theme(
+    legend.position = c(0.8, 0.2)
+  )
+```
+
+Em 2019:
+```{r mapa_iie_2019}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-dpi: 600
+
+mapa_estados_2019 <- geobr::read_state(code_state = "all", year = 2019, showProgress = FALSE)
+iie_2019 <- readr::read_rds("dados/12-iie-2019.rds")
+
+palette <- c("#CAF0F8", "#90E0EF", "#00B4D8", "#0096C7", "#0077B6", "#03045E")
+
+iie_2019 |> 
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media = round(mean(iie_19), 4),
+    mediana = round(median(iie_19), 4),
+    minimo = round(min(iie_19), 4),
+    maximo = round(max(iie_19), 4),
+    desvio_padrao = round(sd(iie_19), 4),
+    coeficiente_variacao = round(((desvio_padrao/media)*100), 2)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::mutate(
+    faixa = dplyr::case_when(
+      media > 0 & media <= 0.4 ~ "0.4",
+      media > 0.4 & media <= 0.5 ~ "0.5",
+      media > 0.5 & media <= 0.6 ~ "0.6",
+      media > 0.6 & media <= 0.7 ~ "0.7", 
+      media > 0.7 & media <= 0.8 ~ "0.8",
+      TRUE ~ "1.0"
+    )
+  ) |> 
+  dplyr::right_join(mapa_estados_2019, by = c("sigla_uf" = "abbrev_state")) |> 
+  ggplot2::ggplot() +
+  ggplot2::geom_sf(
+    ggplot2::aes(geometry = geom, fill = faixa)
+  ) +
+  ggplot2::scale_fill_manual(
+    values = palette,
+    guide = ggplot2::guide_legend(title = "IIE", title.hjust = 0.5),
+  ) +
+  ggplot2::theme_void() +
+  ggplot2::theme(
+    legend.position = c(0.8, 0.2)
+  )
+```
+
+
+### Comparação das notas do Ideb entre 2009 e 2019
+
+Em 2009:
+```{r mapa_ideb_2009}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-dpi: 600
+
+ideb_2009 <- readr::read_rds("dados/13-ideb-2009.rds")
+mapa_estados_2009 <- geobr::read_state(code_state = "all", year = 2010, showProgress = FALSE)
+
+palette_ideb <- c("#CAF0F8", "#90E0EF", "#00B4D8", "#0077B6", "#03045E")
+
+ideb_2009 |>
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media_ideb_09 = mean(media_ideb, na.rm = TRUE)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::mutate(
+    faixa = dplyr::case_when(
+      media_ideb_09 > 0 & media_ideb_09 <= 3 ~ "3.0",
+      media_ideb_09 > 3 & media_ideb_09 <= 3.5 ~ "3.5",
+      media_ideb_09 > 3.5 & media_ideb_09 <= 4 ~ "4.0",
+      media_ideb_09 > 4 & media_ideb_09 <= 4.5 ~ "4.5",
+      TRUE ~ "4.7"
+    )
+  ) |>
+  dplyr::right_join(mapa_estados_2009, by = c("sigla_uf" = "abbrev_state")) |> 
+  ggplot2::ggplot() +
+  ggplot2::geom_sf(
+    ggplot2::aes(geometry = geom, fill = faixa)
+  ) +
+  ggplot2::scale_fill_manual(
+    values = palette_ideb,
+    guide = ggplot2::guide_legend(title = "IDEB", title.hjust = 0.5),
+  ) +
+  ggplot2::theme_void() +
+  ggplot2::theme(
+    legend.position = c(0.8, 0.2)
+  )
+```
+
+Em 2019:
+```{r mapa_ideb_2019}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-dpi: 600
+
+ideb_2019 <- readr::read_rds("dados/14-ideb-2019.rds")
+mapa_estados_2019 <- geobr::read_state(code_state = "all", year = 2019, showProgress = FALSE)
+
+palette_ideb <- c("#CAF0F8", "#90E0EF", "#00B4D8", "#0077B6", "#03045E")
+
+ideb_2019 |>
+  dplyr::group_by(sigla_uf) |>
+  dplyr::summarise(
+    media_ideb_19 = mean(media_ideb, na.rm = TRUE)
+  ) |>
+  dplyr::ungroup() |> 
+  dplyr::mutate(
+    faixa = dplyr::case_when(
+      media_ideb_19 > 0 & media_ideb_19 <= 4 ~ "4.0",
+      media_ideb_19 > 4 & media_ideb_19 <= 4.5 ~ "4.5",
+      media_ideb_19 > 4.5 & media_ideb_19 <= 5 ~ "5.0",
+      media_ideb_19 > 5 & media_ideb_19 <= 5.5 ~ "5.5",
+      TRUE ~ "5.7"
+    )
+  ) |>
+  dplyr::right_join(mapa_estados_2019, by = c("sigla_uf" = "abbrev_state")) |> 
+  ggplot2::ggplot() +
+  ggplot2::geom_sf(
+    ggplot2::aes(geometry = geom, fill = faixa)
+  ) +
+  ggplot2::annotate(
+    "text",
+    x = -33,
+    y = 2,
+    label = "No Nordeste, \na exceção é o \nestado do Ceará, \ncom nota média 5.51.",
+    size = 4.5
+  ) +
+  ggplot2::scale_fill_manual(
+    values = palette_ideb,
+    guide = ggplot2::guide_legend(title = "IDEB", title.hjust = 0.5),
+  ) +
+  ggplot2::theme_void() +
+  ggplot2::theme(
+    legend.position = c(0.8, 0.2)
+  )
+```
+
