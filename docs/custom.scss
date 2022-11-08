@@ -7,20 +7,20 @@ $font-family-sans-serif: 'Lato', Tahoma, sans-serif !default;
 
 // headings
 $presentation-heading-font: 'Yanone Kaffeesatz',  Tahoma, sans-serif  !default;
-$presentation-heading-color: #562457 !default;
+$presentation-heading-color: #005c8b !default;
 $h1-font-size: 1.6em !default;
 $h2-font-size: 1.3em !default;
 $h3-font-size: 1.15em !default;
 
 
 //code
-$code-color: #88398A !default;
+$code-color: #0073ae !default;
   $font-family-monospace: 'Inconsolata', monospace  !default;
 
 // general
 $body-bg: #fff;
   $body-color: #000000;
-  $link-color: #88398a;
+  $link-color: #0073ae;
   $presentation-font-size-root: 25px;
 
 /*-- scss:rules --*/
@@ -41,7 +41,7 @@ $body-bg: #fff;
 
 .author {
   color: $presentation-heading-color;
-  font-size: 0.7em;
+  font-size: 0.9em;
   text-align: right;
 }
 
