@@ -695,6 +695,7 @@ stargazer::stargazer(
 <tr><td style="text-align:left">Constante</td><td>-0.883<sup>***</sup></td><td>-0.009</td></tr>
 <tr><td style="text-align:left"></td><td>(0.082)</td><td>(0.053)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>5,570</td><td>5,570</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.002</td><td>0.011</td></tr>
 <!-- <tr><td style="text-align:left">R Ajustado<sup>2</sup></td><td>0.002</td><td>0.011</td></tr> -->
 <!-- <tr><td style="text-align:left">Erro Padrão Residual</td><td>0.355 (df = 5550)</td><td>0.238 (df = 5542)</td></tr> -->
@@ -724,14 +725,14 @@ stargazer::stargazer(
 
   - ineficiências na alocação dos recursos por parte de países com má governança [@rajkumar_public_2008];
   
-  - fiscalização pouco efetiva dos recursos aplicados, compras superfaturadas ou desvio de verbas [@vasconcelos_infraestrutura_2020-1];
+  - fiscalização pouco efetiva dos recursos aplicados, compras superfaturadas, desvio de verbas, entre outros [@vasconcelos_infraestrutura_2020-1];
   
   - os recursos podem ser disperdiçados, não sendo utilizados para promover a melhora do aprendizado [@monteiro_gasto_2015].
   
 - Mesmo que os coeficientes indiquem uma fraca relação entre os fatores estimados, não se pode dispensar de tais investimentos se a intenção é melhorar a infraestrutura das escolas brasileiras, sobretudo daquelas mais vulneráveis [@vasconcelos_infraestrutura_2020-1].
 
 
-## Resultados {.center}
+## Resultados 
 
 ### Impacto dos Investimentos Públicos em Educação e da Infraestrutura Escolar no Desempenho Educacional
 
@@ -788,6 +789,7 @@ stargazer::stargazer(
 <tr><td style="text-align:left">Constante</td><td>1.837<sup>***</sup></td><td>1.887<sup>***</sup></td></tr>
 <tr><td style="text-align:left"></td><td>(0.037)</td><td>(0.032)</td></tr>
 <tr><td style="text-align:left"></td><td></td><td></td></tr>
+<tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>5,570</td><td>5,570</td></tr>
 <tr><td style="text-align:left">R<sup>2</sup></td><td>0.450</td><td>0.358</td></tr>
 <!-- <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.449</td><td>0.358</td></tr> -->
 <!-- <tr><td style="text-align:left">Residual Std. Error</td><td>0.158 (df = 5515)</td><td>0.143 (df = 5505)</td></tr> -->
@@ -799,13 +801,13 @@ stargazer::stargazer(
 
 ::: {.column width="50%"}
 
-- Há uma relação negativa entre Investimentos Públicos em Educação e o Ideb, com ligeira melhora no último ano;
+- Há uma relação negativa entre Investimentos Públicos em Educação e as notas do Ideb, com ligeira melhora no último ano;
 
 - Há um impacto positivo entre a Infraestrutura Escolar e o Desempenho Educacional: 
 
   - em 2009, o aumento de 1% na Infraestrutura das escolas resultou em uma melhora de 0,402% na qualidade do ensino;
   
-  - em 2019, o mesmo 1% investido em Infraestrutura converteu-se no aumento de 0,441% do Desempenho Escolar.
+  - em 2019, o mesmo 1% investido em Infraestrutura converteu-se no aumento de 0,441% do Desempenho Educacional.
 
 :::
 
@@ -818,11 +820,11 @@ stargazer::stargazer(
 
 -   Ainda é possível observar um elevado nível de desigualdade entre as escolas públicas brasileiras;
 
--   As análises apresentam:
+-   As análises apresentaram:
 
     - uma fraca relação entre os Investimentos Públicos em Educação e a Infraestrutura Escolar;
     
-    - um relação negativa entre Investimentos Públicos em Educação e o Desempenho no Ideb;
+    - um relação negativa entre Investimentos Públicos em Educação e o Desempenho Educacional;
     
     - um impacto positivo da Infraestrutura Escolar e o Desempenho Educacional;
 
@@ -831,6 +833,9 @@ stargazer::stargazer(
 ## Conclusão {.center}
 
 Apesar de o Estado brasileiro ter demonstrado interesse na democratização do ensino público de qualidade, aumentando as despesas nos últimos anos e implementando ações de incentivo, a situação das escolas brasileira ainda é bastante deficiente.
+
+<br>
+<br>
 
 O rendimento do aluno não depende exclusivamente dele, cabe ao poder público disponibilizar os meios para as escolas possuírem uma estrutura básica para exercer suas atividades e que os alunos tenham ao seu alcance um ambiente favorável para o aprendizado.
 
