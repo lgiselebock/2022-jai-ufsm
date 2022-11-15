@@ -4,7 +4,7 @@ author: ["Aluna: Luísa Gisele Böck", "Orientador: Dieison Lenon Casagrande"]
 date: "9 de novembro de 2022"
 format: 
   revealjs: 
-    incremental: true
+    incremental: false
     transition: slide
     footer: "Slides por [Luísa Gisele Böck](https://luisa.rbind.io/), feito com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Código disponível no [GitHub](https://github.com/lgiselebock/ufsm-37a-jai)."
     theme: ["custom.scss"]
@@ -89,6 +89,10 @@ $$
 SIIE_{jp} = \dfrac{\sum^n_{i=1} E_{pij}}{\sum^n_{i=1} E_{maxij}}
 $$
 
+<br>
+
+<font size="4">
+
 -   $SIIE_{jp}$ = subíndice da Infraestrutura Escolar referente à *j-ésima* dimensão e à *p-ésima* escola;\
 
 -   $E_{pij}$ = escore obtido pela *p-ésima* escola do *i-ésimo* indicador da *j-ésima* dimensão (0 ou 1);\
@@ -100,6 +104,8 @@ $$
 -   $p$ = número de escolar (1, 2, 3, ..., k);\
 
 -   $i$ = número de indicadores da *j-ésima* dimensão (1, 2, 3, ..., n).
+
+</font>
 :::
 :::
 
@@ -149,6 +155,8 @@ Foram estimados, através do método de Mínimos Quadrados Ordinários (MQO), do
         $$
         lnIDEB_j = \beta_0 + \beta_1lnIIE_j + \beta_2lnInvPublico_j + \epsilon_j
         $$
+        
+<font size="4">
 
   - $lnIIE_j$ -- logaritmo do Índice de Infraestrutura da Escola para o *j-ésimo* município;
 
@@ -156,6 +164,7 @@ Foram estimados, através do método de Mínimos Quadrados Ordinários (MQO), do
 
   - $lnIDEB_j$ -- logaritmo do Índice de Desenvolvimento da Educação Básica para o *j-ésimo* município.
 
+</font>
 
 ## Resultados
 
